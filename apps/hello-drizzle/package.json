@@ -9,7 +9,7 @@
     "db:push": "drizzle-kit push --config=drizzle.config.ts",
     "db:studio": "drizzle-kit studio --config=drizzle.config.ts",
     "db:migrate": "ts-node ./src/db/migrate.ts",
-    "db:seed": "ts-node ./src/db/seend.ts"
+    "db:seed": "ts-node ./src/db/seed.ts"
   },
   "keywords": [],
   "author": "",
