@@ -7,6 +7,7 @@
     "dev": "tsx watch src/index.ts",
     "db:generate": "drizzle-kit generate --config=drizzle.config.ts",
     "db:push": "drizzle-kit push --config=drizzle.config.ts",
+    "db:pull": "drizzle-kit pull --config=drizzle.config.ts",
     "db:studio": "drizzle-kit studio --config=drizzle.config.ts",
     "db:migrate": "ts-node ./src/db/migrate.ts",
     "db:seed": "ts-node ./src/db/seed.ts"
@@ -19,6 +20,7 @@
     "drizzle-orm": "^0.36.0",
     "hono": "^4.6.9",
     "pg": "^8.13.1",
+    "postgres": "^3.4.5",
     "tsx": "^4.7.1"
   },
   "devDependencies": {
