@@ -8,7 +8,11 @@ importers:
 
   .: {}
 
-  apps/hello: {}
+  apps/hello:
+    devDependencies:
+      '@monorepo/helloworld':
+        specifier: ^1.0.0
+        version: link:../../packages/helloworld
 
   packages/helloworld:
     dependencies:

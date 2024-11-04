@@ -11,6 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "@monorepo/helloworld": "^1.0.0"
   }
 }
