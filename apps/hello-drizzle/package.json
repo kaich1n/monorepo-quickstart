@@ -1,0 +1,29 @@
+{
+  "name": "@monorepo/hello-drizzle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "db:generate": "drizzle-kit generate --config=drizzle.config.ts",
+    "db:push": "drizzle-kit push --config=drizzle.config.ts",
+    "db:studio": "drizzle-kit studio --config=drizzle.config.ts",
+    "db:migrate": "ts-node ./src/db/migrate.ts",
+    "db:seed": "ts-node ./src/db/seend.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hono/node-server": "^1.13.5",
+    "drizzle-orm": "^0.36.0",
+    "hono": "^4.6.9",
+    "pg": "^8.13.1",
+    "tsx": "^4.7.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.27.1"
+  }
+}
