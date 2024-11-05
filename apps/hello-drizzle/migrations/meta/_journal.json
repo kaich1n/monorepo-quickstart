@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1730705248001,
-      "tag": "0000_dusty_loki",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1730726702607,
-      "tag": "0002_greedy_ultron",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1730727380017,
-      "tag": "0003_bored_frog_thor",
+      "when": 1730797894721,
+      "tag": "0000_massive_quasar",
       "breakpoints": true
     }
   ]
