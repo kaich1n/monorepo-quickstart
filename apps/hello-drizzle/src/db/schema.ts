@@ -19,7 +19,7 @@ export const products = pgTable("products", {
   index("product_ver_index").on(t.version)
 ]);
 
-export const deviceIdentifiers = pgTable("device_identifiers", {
+export const deviceEnrollment= pgTable("device_enrollment", {
   id: serial("id").primaryKey(),
   sn: varchar("sn", { length: 32 }).unique().notNull(),
   mac: varchar("mac", { length: 32 }).unique(),
@@ -31,11 +31,11 @@ export const deviceIdentifiers = pgTable("device_identifiers", {
   createdAt: timestamp("created_at").notNull().defaultNow(),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 }, (t) => [
-  uniqueIndex("dev_id_sn_uniq_index").on(t.sn),
-  uniqueIndex("dev_id_mac_uniq_index").on(t.mac),
-  uniqueIndex("dev_id_tag_uniq_index").on(t.tag),
-  uniqueIndex("dev_id_imei_uniq_index").on(t.imei),
-  index("dev_id_product_sku_index").on(t.productSku),
+  uniqueIndex("device_enrollment_sn_uniq_index").on(t.sn),
+  uniqueIndex("device_enrollment_mac_uniq_index").on(t.mac),
+  uniqueIndex("device_enrollment_tag_uniq_index").on(t.tag),
+  uniqueIndex("device_enrollment_imei_uniq_index").on(t.imei),
+  index("device_enrollment_product_sku_index").on(t.productSku),
 ]);
 
 export const digitalTwinStatus = pgEnum('digital_twin_status', ['Enabled', 'Disabled']);

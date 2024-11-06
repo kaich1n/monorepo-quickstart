@@ -1,11 +1,11 @@
 {
-  "id": "7ecf838e-e787-4f7d-8120-056d8f183563",
+  "id": "621cada6-9dfd-4e49-a801-d4d1e9486ebe",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.device_identifiers": {
-      "name": "device_identifiers",
+    "public.device_enrollment": {
+      "name": "device_enrollment",
       "schema": "",
       "columns": {
         "id": {
@@ -72,8 +72,8 @@
         }
       },
       "indexes": {
-        "dev_id_sn_uniq_index": {
-          "name": "dev_id_sn_uniq_index",
+        "device_enrollment_sn_uniq_index": {
+          "name": "device_enrollment_sn_uniq_index",
           "columns": [
             {
               "expression": "sn",
@@ -87,8 +87,8 @@
           "method": "btree",
           "with": {}
         },
-        "dev_id_mac_uniq_index": {
-          "name": "dev_id_mac_uniq_index",
+        "device_enrollment_mac_uniq_index": {
+          "name": "device_enrollment_mac_uniq_index",
           "columns": [
             {
               "expression": "mac",
@@ -102,8 +102,8 @@
           "method": "btree",
           "with": {}
         },
-        "dev_id_tag_uniq_index": {
-          "name": "dev_id_tag_uniq_index",
+        "device_enrollment_tag_uniq_index": {
+          "name": "device_enrollment_tag_uniq_index",
           "columns": [
             {
               "expression": "tag",
@@ -117,8 +117,8 @@
           "method": "btree",
           "with": {}
         },
-        "dev_id_imei_uniq_index": {
-          "name": "dev_id_imei_uniq_index",
+        "device_enrollment_imei_uniq_index": {
+          "name": "device_enrollment_imei_uniq_index",
           "columns": [
             {
               "expression": "imei",
@@ -132,8 +132,8 @@
           "method": "btree",
           "with": {}
         },
-        "dev_id_product_sku_index": {
-          "name": "dev_id_product_sku_index",
+        "device_enrollment_product_sku_index": {
+          "name": "device_enrollment_product_sku_index",
           "columns": [
             {
               "expression": "product_sku",
@@ -149,9 +149,9 @@
         }
       },
       "foreignKeys": {
-        "device_identifiers_product_sku_products_sku_fk": {
-          "name": "device_identifiers_product_sku_products_sku_fk",
-          "tableFrom": "device_identifiers",
+        "device_enrollment_product_sku_products_sku_fk": {
+          "name": "device_enrollment_product_sku_products_sku_fk",
+          "tableFrom": "device_enrollment",
           "tableTo": "products",
           "columnsFrom": [
             "product_sku"
@@ -165,36 +165,36 @@
       },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
-        "device_identifiers_sn_unique": {
-          "name": "device_identifiers_sn_unique",
+        "device_enrollment_sn_unique": {
+          "name": "device_enrollment_sn_unique",
           "nullsNotDistinct": false,
           "columns": [
             "sn"
           ]
         },
-        "device_identifiers_mac_unique": {
-          "name": "device_identifiers_mac_unique",
+        "device_enrollment_mac_unique": {
+          "name": "device_enrollment_mac_unique",
           "nullsNotDistinct": false,
           "columns": [
             "mac"
           ]
         },
-        "device_identifiers_tag_unique": {
-          "name": "device_identifiers_tag_unique",
+        "device_enrollment_tag_unique": {
+          "name": "device_enrollment_tag_unique",
           "nullsNotDistinct": false,
           "columns": [
             "tag"
           ]
         },
-        "device_identifiers_imei_unique": {
-          "name": "device_identifiers_imei_unique",
+        "device_enrollment_imei_unique": {
+          "name": "device_enrollment_imei_unique",
           "nullsNotDistinct": false,
           "columns": [
             "imei"
           ]
         },
-        "device_identifiers_nal_code_unique": {
-          "name": "device_identifiers_nal_code_unique",
+        "device_enrollment_nal_code_unique": {
+          "name": "device_enrollment_nal_code_unique",
           "nullsNotDistinct": false,
           "columns": [
             "nal_code"
