@@ -1,5 +1,5 @@
 {
-  "id": "c9bc9937-bc9f-45b2-8b59-d858fc491447",
+  "id": "7ecf838e-e787-4f7d-8120-056d8f183563",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -331,8 +331,8 @@
           "method": "btree",
           "with": {}
         },
-        "digtial_twin_connectio_state_index": {
-          "name": "digtial_twin_connectio_state_index",
+        "digital_twin_connection_state_index": {
+          "name": "digital_twin_connection_state_index",
           "columns": [
             {
               "expression": "connectionState",

@@ -56,7 +56,7 @@ export const digitalTwins = pgTable("digital_twins", {
   index("digital_twin_device_id_index").on(t.deviceId),
   index("digital_twin_product_sku_index").on(t.productSku),
   index("digital_twin_status_index").on(t.status),
-  index("digtial_twin_connectio_state_index").on(t.connectionState),
+  index("digital_twin_connection_state_index").on(t.connectionState),
 ]);
 
 

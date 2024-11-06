@@ -61,6 +61,6 @@ CREATE UNIQUE INDEX IF NOT EXISTS "digital_twin_asset_id_uniq_index" ON "digital
 CREATE INDEX IF NOT EXISTS "digital_twin_device_id_index" ON "digital_twins" USING btree ("device_id");--> statement-breakpoint
 CREATE INDEX IF NOT EXISTS "digital_twin_product_sku_index" ON "digital_twins" USING btree ("product_sku");--> statement-breakpoint
 CREATE INDEX IF NOT EXISTS "digital_twin_status_index" ON "digital_twins" USING btree ("status");--> statement-breakpoint
-CREATE INDEX IF NOT EXISTS "digtial_twin_connectio_state_index" ON "digital_twins" USING btree ("connectionState");--> statement-breakpoint
+CREATE INDEX IF NOT EXISTS "digital_twin_connection_state_index" ON "digital_twins" USING btree ("connectionState");--> statement-breakpoint
 CREATE INDEX IF NOT EXISTS "product_sku_index" ON "products" USING btree ("sku");--> statement-breakpoint
 CREATE INDEX IF NOT EXISTS "product_ver_index" ON "products" USING btree ("version");
