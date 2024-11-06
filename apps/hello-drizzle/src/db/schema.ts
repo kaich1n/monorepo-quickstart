@@ -41,7 +41,7 @@ export const deviceIdentifiers = pgTable("device_identifiers", {
 export const digitalTwinStatus = pgEnum('digital_twin_status', ['Enabled', 'Disabled']);
 export const digitalTwinConnectionStates = pgEnum('digital_twin_connection_states', ['Online', 'Offline']);
 
-export const digitalTwins = pgTable("digital_tiwns", {
+export const digitalTwins = pgTable("digital_twins", {
   id: serial("id").primaryKey(),
   assetId: integer("asset_id").notNull().unique(),
   deviceId: integer("device_id").notNull(),

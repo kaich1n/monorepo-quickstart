@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS "device_identifiers" (
 	CONSTRAINT "device_identifiers_nal_code_unique" UNIQUE("nal_code")
 );
 --> statement-breakpoint
-CREATE TABLE IF NOT EXISTS "digital_tiwns" (
+CREATE TABLE IF NOT EXISTS "digital_twins" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"asset_id" integer NOT NULL,
 	"device_id" integer NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS "digital_tiwns" (
 	"twin" jsonb,
 	"created_at" timestamp DEFAULT now() NOT NULL,
 	"updated_at" timestamp DEFAULT now() NOT NULL,
-	CONSTRAINT "digital_tiwns_asset_id_unique" UNIQUE("asset_id")
+	CONSTRAINT "digital_twins_asset_id_unique" UNIQUE("asset_id")
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "products" (
@@ -57,10 +57,10 @@ CREATE UNIQUE INDEX IF NOT EXISTS "dev_id_mac_uniq_index" ON "device_identifiers
 CREATE UNIQUE INDEX IF NOT EXISTS "dev_id_tag_uniq_index" ON "device_identifiers" USING btree ("tag");--> statement-breakpoint
 CREATE UNIQUE INDEX IF NOT EXISTS "dev_id_imei_uniq_index" ON "device_identifiers" USING btree ("imei");--> statement-breakpoint
 CREATE INDEX IF NOT EXISTS "dev_id_product_sku_index" ON "device_identifiers" USING btree ("product_sku");--> statement-breakpoint
-CREATE UNIQUE INDEX IF NOT EXISTS "digital_twin_asset_id_uniq_index" ON "digital_tiwns" USING btree ("asset_id");--> statement-breakpoint
-CREATE INDEX IF NOT EXISTS "digital_twin_device_id_index" ON "digital_tiwns" USING btree ("device_id");--> statement-breakpoint
-CREATE INDEX IF NOT EXISTS "digital_twin_product_sku_index" ON "digital_tiwns" USING btree ("product_sku");--> statement-breakpoint
-CREATE INDEX IF NOT EXISTS "digital_twin_status_index" ON "digital_tiwns" USING btree ("status");--> statement-breakpoint
-CREATE INDEX IF NOT EXISTS "digtial_twin_connectio_state_index" ON "digital_tiwns" USING btree ("connectionState");--> statement-breakpoint
+CREATE UNIQUE INDEX IF NOT EXISTS "digital_twin_asset_id_uniq_index" ON "digital_twins" USING btree ("asset_id");--> statement-breakpoint
+CREATE INDEX IF NOT EXISTS "digital_twin_device_id_index" ON "digital_twins" USING btree ("device_id");--> statement-breakpoint
+CREATE INDEX IF NOT EXISTS "digital_twin_product_sku_index" ON "digital_twins" USING btree ("product_sku");--> statement-breakpoint
+CREATE INDEX IF NOT EXISTS "digital_twin_status_index" ON "digital_twins" USING btree ("status");--> statement-breakpoint
+CREATE INDEX IF NOT EXISTS "digtial_twin_connectio_state_index" ON "digital_twins" USING btree ("connectionState");--> statement-breakpoint
 CREATE INDEX IF NOT EXISTS "product_sku_index" ON "products" USING btree ("sku");--> statement-breakpoint
 CREATE INDEX IF NOT EXISTS "product_ver_index" ON "products" USING btree ("version");

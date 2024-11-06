@@ -1,5 +1,5 @@
 {
-  "id": "9f75a0c9-5815-4f3a-96a4-dc479d461e81",
+  "id": "c9bc9937-bc9f-45b2-8b59-d858fc491447",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -205,8 +205,8 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.digital_tiwns": {
-      "name": "digital_tiwns",
+    "public.digital_twins": {
+      "name": "digital_twins",
       "schema": "",
       "columns": {
         "id": {
@@ -350,8 +350,8 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
-        "digital_tiwns_asset_id_unique": {
-          "name": "digital_tiwns_asset_id_unique",
+        "digital_twins_asset_id_unique": {
+          "name": "digital_twins_asset_id_unique",
           "nullsNotDistinct": false,
           "columns": [
             "asset_id"
